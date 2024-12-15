@@ -1,0 +1,41 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-color: #F8F9FA;
+  }
+  50% {
+    background-color: #F1F5F9;
+  }
+}
+
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.bg-gradient {
+  animation: gradient 3s linear infinite;
+}
+
+.bg-dot {
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+  
+  .bg-gradient {
+    animation: none;
+  }
+}
